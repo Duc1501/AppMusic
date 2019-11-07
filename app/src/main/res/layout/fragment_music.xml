@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@drawable/rectang_home"
+            android:id="@+id/rc_listmusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/fragment_running_music"
+            android:layout_height="match_parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="14dp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:background="@drawable/rectang_running_bottom"
+                android:orientation="horizontal"
+                android:layout_height="56dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar_offline"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/logo_music_error" />
+
+            <LinearLayout
+                android:id="@+id/ll_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_previous_offline"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_skip_previous_white_48dp" />
+
+                <ImageView
+                    android:id="@+id/btn_play_offline"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_play_circle_outline_white_36dp" />
+
+                <ImageView
+                    android:id="@+id/btn_next_offline"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_skip_next_white_48dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ten_bai_hat_offline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/ll_play"
+                android:layout_toRightOf="@id/iv_avatar_offline"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:text="Cô Thắm Không Về" />
+
+            <TextView
+                android:id="@+id/tv_ten_casi_offline"
+                android:textColor="#E6E5E5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/ll_play"
+                android:layout_toRightOf="@id/iv_avatar_offline"
+                android:layout_below="@id/tv_ten_bai_hat_offline"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textSize="10sp"
+                android:text="Biii" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

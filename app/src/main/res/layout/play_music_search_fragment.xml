@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/background_play_music_online"
+            android:src="@drawable/ctkv"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:background="#888A7F7F"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.8">
+
+                <ImageView
+                    android:id="@+id/iv_btn_back"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_arrow_back_white_36dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="0.5"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:id="@+id/name_song"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Cô Thắm Không Về"
+                        android:lines="1"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="#DAD9D9"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:lines="1"
+                        android:id="@+id/name_singer"
+                        android:layout_gravity="center"
+                        android:layout_below="@id/tv_name_song_runningsong"
+                        android:text="Phát Hồ-Jokes Bii-Thiện"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/im_yeuthich"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_favorite_border_white_36dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mid"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="364dp"
+                    android:layout_height="364dp">
+
+                    <com.marcinmoskala.arcseekbar.ArcSeekBar
+                        android:id="@+id/arc_seek"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="24dp"
+                        app:progressColor="#2196F3"
+                        app:thumb="@drawable/thumd_seekbar" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_image_song"
+                        android:layout_width="294dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="56dp"
+                        android:layout_height="294dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar_song"
+                            android:layout_width="match_parent"
+                            android:src="@drawable/logo_music_error"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:layout_width="148dp"
+                            android:layout_height="148dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/draw_oval" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:background="@drawable/gradient_song"
+                            android:layout_centerInParent="true"
+                            android:layout_height="54dp" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/btn_pause_and_play"
+                            android:src="@drawable/ic_pause_circle_outline_white_48dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/tv_time_doc"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:text="|"
+                            android:layout_below="@id/btn_pause_and_play"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_time_song_running"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="00:00"
+                            android:layout_marginRight="4dp"
+                            android:layout_below="@id/btn_pause_and_play"
+                            android:layout_toLeftOf="@id/tv_time_doc"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_time_song"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/btn_pause_and_play"
+                            android:layout_toRightOf="@id/tv_time_doc"
+                            android:text="00:00"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="324dp"
+                    android:layout_height="64dp">
+
+                    <ImageView
+                        android:id="@+id/btn_shuffle_running_song"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/ic_shuffle_white_24dp"
+                        android:layout_height="24dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_previous_running_song"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_skip_previous_white_48dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/btn_next_running_song"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_skip_next_white_48dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_btn_repeat"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="0.4"
+                        android:src="@drawable/ic_repeat_one_white_24dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4">
+
+                <LinearLayout
+                    android:layout_marginTop="56dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/background_comment"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_comment"
+                        android:text="BÌNH LUẬN"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar_comment"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:src="@drawable/avata_account"/>
+                        <RelativeLayout
+                            android:background="@drawable/background_commnet2"
+                            android:layout_toRightOf="@id/avatar_comment"
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_marginLeft="12dp"
+                                android:id="@+id/name_account_comment"
+                                android:text="Lê Công Đức"
+                                android:textColor="#B6B6B6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:text=" . Vừa xong"
+                                android:textColor="#B6B6B6"
+                                android:layout_toRightOf="@id/name_account_comment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_below="@id/name_account_comment"
+                                android:lines="3"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:text="Em vào đời bằng náo nhiệt, Anh vào đời bằng âm thầm. Người đã đến vui đấy nhưng rồi cũng đi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_comment"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
